@@ -1,0 +1,26 @@
+
+This connection pool implementation is a derived work from HikariCP Version 3.4.5 (May 2020)
+
+https://github.com/brettwooldridge/HikariCP
+
+published under Apache 2.0 License.
+
+Motivations for the derived work:
+
+- remove all dependencies
+- remove everything with metrics
+- remove everything with JMX
+- remove everything with slf4j logging
+- remove everything with OSGI, Hibernate, Spring, JNDI
+- remove everything with javassist
+- remove everything with suspend/resume
+- fix module-info.java
+- remove MacOS "milli second" clock
+- clean up source code, packages, inheritances, inner classes refactoring, get rid of helper classes
+- no system property dark magic
+- no addDataSourceProperty magic, pass a Properties object always to PoolConfig which contains JDBC driver properties
+- Java 11+
+- JUnit 5+
+- Gradle 6.4+
+
+The result is an 88k jar.
